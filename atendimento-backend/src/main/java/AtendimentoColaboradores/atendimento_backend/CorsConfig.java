@@ -12,13 +12,10 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**")
-                        .allowedOrigins("https://atendimento-3bb5bo7jv-mateuscortezdevs-projects.vercel.app")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*") // aceita todos os headers do navegador
-                        .exposedHeaders("Authorization", "Content-Type")
-                        .allowCredentials(true)
-                        .maxAge(3600); // cache do preflight por 1h
+                registry.addMapping("/**")
+                        .allowedOrigins("https://atendimento-7gv53o2fv-mateuscortezdevs-projects.vercel.app")
+                        .allowedMethods("*")
+                        .allowedHeaders("*");
             }
         };
     }
