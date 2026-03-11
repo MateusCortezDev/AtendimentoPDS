@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { API_URL } from "../services/apiService";
 
 function CriarChamado({ usuarioId }) {
   const [titulo, setTitulo] = useState("");
@@ -14,7 +15,7 @@ function CriarChamado({ usuarioId }) {
       setError("Preencha todos os campos antes de criar o chamado.");
       return;
     }
-    
+
     try {
       await axios.post(`${API_URL}/chamados/${usuarioId}`, {
         titulo,

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
-import axios from "axios";
 import "./Chamados.css";
+import { API_URL } from "../services/apiService";
+import axios from "axios";
 
 function ListarChamados({ isAtendente, usuarioId }) {
 

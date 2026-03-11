@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { API_URL } from "../services/apiService";
 
 function CadastroUsuario({ onCadastro }) {
   const [nome, setNome] = useState("");
@@ -19,7 +20,7 @@ function CadastroUsuario({ onCadastro }) {
 
     try {
       // Usando proxy: não precisa http://localhost:8080
-      await axios.post("http://localhost:8080/api/usuarios/cadastro", {
+      await axios.post(`${API_URL}/usuarios/cadastro`, {
         nome, email, senha, setor, perfil
       });
 

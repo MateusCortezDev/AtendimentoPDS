@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { API_URL } from "../services/apiService";
 
 function Dashboard() {
   const [metricas, setMetricas] = useState({ abertos: 0, concluidos: 0 });
