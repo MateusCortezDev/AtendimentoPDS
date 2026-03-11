@@ -13,14 +13,13 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://atendimento-megahack-mateuscordeiro.vercel.app")
+                        .allowedOrigins("https://atendimento-im00h3t36-mateuscortezdevs-projects.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowCredentials(true);
             }
         };
     }
 }
-
 
 
 
