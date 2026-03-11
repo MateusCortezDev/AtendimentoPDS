@@ -13,9 +13,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://atendimento-im00h3t36-mateuscortezdevs-projects.vercel.app")
+                        .allowedOrigins("https://atendimento-3bb5bo7jv-mateuscortezdevs-projects.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*") // aceita todos os headers
+                        .allowedHeaders("*") // aceita todos os headers do navegador
                         .exposedHeaders("Authorization", "Content-Type")
                         .allowCredentials(true)
                         .maxAge(3600); // cache do preflight por 1h
