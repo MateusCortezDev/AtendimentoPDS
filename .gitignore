@@ -27,5 +27,3 @@ Thumbs.db
 # arquivos de ambiente
 .env
 application-local.properties
-
-atendimento-backend/src/main/resources/application.properties

@@ -7,7 +7,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchMetricas = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/chamados/metricas");
+        const response = await axios.get(`${API_URL}/chamados/metricas`);
         setMetricas(response.data);
       } catch (err) {
         console.error("Erro ao buscar métricas:", err);

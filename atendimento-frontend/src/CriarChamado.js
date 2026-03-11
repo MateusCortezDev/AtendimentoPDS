@@ -14,9 +14,9 @@ function CriarChamado({ usuarioId }) {
       setError("Preencha todos os campos antes de criar o chamado.");
       return;
     }
-
+    
     try {
-      await axios.post(`http://localhost:8080/api/chamados/${usuarioId}`, {
+      await axios.post(`${API_URL}/chamados/${usuarioId}`, {
         titulo,
         descricao,
         setor,

@@ -19,7 +19,7 @@ function Login({ onLogin, onCadastroClick }) {
     try {
 
       const response = await axios.post(
-        "http://localhost:8080/api/usuarios/login",
+        `${API_URL}/usuarios/login`,
         {
           email: email,
           senha: senha

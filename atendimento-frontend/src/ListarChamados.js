@@ -15,10 +15,10 @@ function ListarChamados({ isAtendente, usuarioId }) {
       let response;
 
       if (isAtendente) {
-        response = await axios.get("http://localhost:8080/api/chamados/atendente");
+        response = await axios.get(`${API_URL}/chamados/atendente`);
       } else {
         response = await axios.get(
-          `http://localhost:8080/api/chamados/colaborador/${usuarioId}`
+          `${API_URL}/chamados/colaborador/${usuarioId}`
         );
       }
 
@@ -46,7 +46,7 @@ function ListarChamados({ isAtendente, usuarioId }) {
     try {
 
       const response = await axios.get(
-        `http://localhost:8080/api/chamados/${chamado.id}/comentarios`
+        `${API_URL}/chamados/${chamado.id}/comentarios`
       );
 
       let comentarios = response.data;
@@ -78,7 +78,7 @@ function ListarChamados({ isAtendente, usuarioId }) {
     try {
 
       await axios.post(
-        `http://localhost:8080/api/chamados/${chamadoSelecionado.id}/comentarios`,
+        `${API_URL}/chamados/${chamadoSelecionado.id}/comentarios`,
         {
           texto: novoComentario,
           autor: { id: usuarioId }
@@ -100,7 +100,7 @@ function ListarChamados({ isAtendente, usuarioId }) {
     try {
 
       await axios.put(
-        `http://localhost:8080/api/chamados/${chamadoSelecionado.id}/concluir`
+        `${API_URL}/chamados/${chamadoSelecionado.id}/concluir`
       );
 
       alert("Chamado concluído!");
@@ -122,7 +122,7 @@ function ListarChamados({ isAtendente, usuarioId }) {
     try {
 
       await axios.delete(
-        `http://localhost:8080/api/chamados/${chamadoSelecionado.id}`
+        `${API_URL}/chamados/${chamadoSelecionado.id}`
       );
 
       alert("Chamado excluído!");

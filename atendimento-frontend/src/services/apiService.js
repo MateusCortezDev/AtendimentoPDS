@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // endereço do backend
-const BASE_URL = "http://localhost:8080/api";
+const API_URL = "https://atendimentopds.onrender.com/api";
 
 export const getHello = async () => {
   const response = await axios.get(`${BASE_URL}/hello`);
