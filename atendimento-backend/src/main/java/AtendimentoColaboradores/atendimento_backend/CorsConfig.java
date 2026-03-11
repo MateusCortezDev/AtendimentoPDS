@@ -15,8 +15,8 @@ public class CorsConfig {
                 registry.addMapping("/api/**")
                         .allowedOrigins("https://atendimento-im00h3t36-mateuscortezdevs-projects.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*") // permite todos os headers
-                        .exposedHeaders("Authorization", "Content-Type") // expõe cabeçalhos úteis
+                        .allowedHeaders("*") // aceita todos os headers
+                        .exposedHeaders("Authorization", "Content-Type")
                         .allowCredentials(true)
                         .maxAge(3600); // cache do preflight por 1h
             }
