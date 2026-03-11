@@ -1,10 +1,10 @@
-/* Container centralizado */
+/* Container ocupa toda a tela e centraliza */
 .login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f4f6f8;
+  justify-content: center;   /* centraliza horizontal */
+  align-items: center;       /* centraliza vertical */
+  height: 100vh;             /* ocupa altura total da tela */
+  background-color: #f4f6f8; /* fundo claro */
 }
 
 /* Card de login */
@@ -30,7 +30,6 @@
   margin: 8px 0;
   border: 1px solid #ddd;
   border-radius: 6px;
-  transition: border-color 0.2s ease;
 }
 
 .login-card input:focus {
