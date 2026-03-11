@@ -10,7 +10,7 @@ import java.time.LocalTime;
 import java.util.*;
 
 @RestController
-@RequestMapping("/api/usuarios")
+@RequestMapping("/api/chamados")
 @CrossOrigin(origins = "https://atendimento-7gv53o2fv-mateuscortezdevs-projects.vercel.app")
 public class ChamadoController {
 
