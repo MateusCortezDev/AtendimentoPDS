@@ -12,17 +12,15 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
+                registry.addMapping("/api/**")
+                        .allowedOrigins("https://atendimento-megahack-mateuscordeiro.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedOrigins(
-                            "http://localhost:3000",
-                            "https://atendimento-pds.vercel.app"
-                        )
                         .allowCredentials(true);
             }
         };
     }
 }
+
 
 
 
