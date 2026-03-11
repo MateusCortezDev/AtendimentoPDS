@@ -27,7 +27,7 @@ function CadastroUsuario({ onCadastro }) {
     }
   };
 
-  // estilos e JSX continuam iguais
+  // JSX continua igual
 }
 
 export default CadastroUsuario;

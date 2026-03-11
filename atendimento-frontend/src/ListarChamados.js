@@ -7,7 +7,7 @@ import {
   adicionarComentario,
   concluirChamado,
   excluirChamado
-} from "../services/apiService";
+} from "./services/apiService";
 
 function ListarChamados({ isAtendente, usuarioId }) {
   const [chamados, setChamados] = useState([]);

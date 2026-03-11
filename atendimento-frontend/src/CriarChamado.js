@@ -33,7 +33,7 @@ function CriarChamado({ usuarioId }) {
     }
   };
 
-  // estilos e JSX continuam iguais
+  // JSX continua igual
 }
 
 export default CriarChamado;
