@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { criarChamado } from "../services/apiService";
+import { criarChamado } from "./services/apiService";
 
 function CriarChamado({ usuarioId }) {
   const [titulo, setTitulo] = useState("");

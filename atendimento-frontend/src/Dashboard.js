@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getMetricas } from "../services/apiService";
+import { getMetricas } from "./services/apiService";
 
 function Dashboard() {
   const [metricas, setMetricas] = useState({ abertos: 0, concluidos: 0 });

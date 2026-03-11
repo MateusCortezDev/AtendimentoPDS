@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { loginUsuario } from "../services/apiService";
+import { loginUsuario } from "./services/apiService";
 
 function Login({ onLogin, onCadastroClick }) {
   const [email, setEmail] = useState("");
