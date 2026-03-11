@@ -1,0 +1,81 @@
+.container-chamados{
+  margin-top:20px;
+}
+
+.tabela-chamados{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+.tabela-chamados th{
+  background:#1976d2;
+  color:white;
+  padding:10px;
+  text-align:left;
+}
+
+.tabela-chamados td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+
+.linha-chamado:hover{
+  background:#f5f7fa;
+  cursor:pointer;
+}
+
+.sem-chamado{
+  text-align:center;
+  padding:15px;
+}
+
+.detalhe-chamado{
+  margin-top:20px;
+  background:white;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.lista-comentarios{
+  list-style:none;
+  padding:0;
+}
+
+.comentario-item{
+  background:#f4f6f8;
+  padding:10px;
+  border-radius:5px;
+  margin-bottom:8px;
+}
+
+.area-comentario{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+}
+
+.area-comentario input{
+  flex:1;
+  padding:8px;
+}
+
+.area-comentario button{
+  background:#1976d2;
+  color:white;
+  border:none;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.status.aberto{
+  color:orange;
+  font-weight:bold;
+}
+
+.status.concluido{
+  color:green;
+  font-weight:bold;
+}
