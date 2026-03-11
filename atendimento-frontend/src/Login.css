@@ -1,34 +1,33 @@
-/* Container principal */
+/* Container centralizado */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  background-color: #f4f6f8;
 }
 
 /* Card de login */
 .login-card {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  width: 350px;
-  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 300px;
 }
 
 /* Título */
 .login-card h2 {
-  margin-bottom: 20px;
   color: #1976d2;
-  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Inputs */
 .login-card input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
+  padding: 10px;
+  margin: 8px 0;
   border: 1px solid #ddd;
   border-radius: 6px;
   transition: border-color 0.2s ease;
@@ -41,26 +40,26 @@
 
 /* Botões */
 .login-card button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
+  flex: 1;
+  padding: 10px;
   border: none;
   border-radius: 6px;
-  background-color: #1976d2;
-  color: white;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  font-weight: bold;
 }
 
-.login-card button:hover {
+.login-card .primary-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.login-card .primary-btn:hover {
   background-color: #125a9c;
 }
 
-/* Botão secundário */
 .login-card .secondary-btn {
   background-color: #f44336;
-  margin-top: 10px;
+  color: white;
 }
 
 .login-card .secondary-btn:hover {
@@ -70,6 +69,6 @@
 /* Mensagem de erro */
 .login-card .error {
   color: red;
+  text-align: center;
   margin-top: 10px;
-  font-size: 14px;
 }
