@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { cadastrarUsuario } from "./services/apiService";
+import "./CadastroUsuario.css";
 
 function CadastroUsuario({ onCadastro }) {
   const [nome, setNome] = useState("");
