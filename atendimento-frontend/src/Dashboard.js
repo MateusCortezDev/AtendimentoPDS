@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { API_URL } from "../services/apiService";
+import { getMetricas } from "../services/apiService";
 
 function Dashboard() {
   const [metricas, setMetricas] = useState({ abertos: 0, concluidos: 0 });
@@ -8,8 +7,8 @@ function Dashboard() {
   useEffect(() => {
     const fetchMetricas = async () => {
       try {
-        const response = await axios.get(`${API_URL}/chamados/metricas`);
-        setMetricas(response.data);
+        const data = await getMetricas();
+        setMetricas(data);
       } catch (err) {
         console.error("Erro ao buscar métricas:", err);
       }
