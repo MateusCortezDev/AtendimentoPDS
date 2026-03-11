@@ -8,15 +8,12 @@ function Login({ onLogin, onCadastroClick }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!email || !senha) {
       setError("Preencha todos os campos!");
       return;
     }
-
     try {
       const usuario = await loginUsuario(email, senha);
-
       if (usuario) {
         localStorage.setItem("usuario", JSON.stringify(usuario));
         onLogin(usuario);
@@ -29,7 +26,15 @@ function Login({ onLogin, onCadastroClick }) {
     }
   };
 
-  // estilos e JSX continuam iguais
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
+      <input type="password" value={senha} onChange={e => setSenha(e.target.value)} placeholder="Senha" />
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      <button type="submit">Entrar</button>
+      <button type="button" onClick={onCadastroClick}>Cadastrar</button>
+    </form>
+  );
 }
 
 export default Login;

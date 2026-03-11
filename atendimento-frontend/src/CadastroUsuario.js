@@ -11,23 +11,46 @@ function CadastroUsuario({ onCadastro }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!nome || !email || !senha || !setor || !perfil) {
       setError("Preencha todos os campos!");
       return;
     }
-
     try {
       await cadastrarUsuario({ nome, email, senha, setor, perfil });
       alert("Usuário cadastrado com sucesso!");
-      onCadastro(); // volta para tela de login
+      onCadastro();
     } catch (err) {
       console.error(err);
       setError("Erro ao cadastrar usuário!");
     }
   };
 
-  // JSX continua igual
+  return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh", backgroundColor: "#f4f6f8" }}>
+      <form onSubmit={handleSubmit} style={{ backgroundColor: "white", padding: "30px", borderRadius: "8px", boxShadow: "0 2px 5px rgba(0,0,0,0.1)", width: "300px" }}>
+        <h2 style={{ color: "#1976d2", textAlign: "center" }}>Cadastro</h2>
+        <input placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
+        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
+        <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
+        <select value={setor} onChange={e => setSetor(e.target.value)}>
+          <option value="">Selecione o setor</option>
+          <option value="TI">TI</option>
+          <option value="RH">RH</option>
+          <option value="Financeiro">Financeiro</option>
+        </select>
+        <select value={perfil} onChange={e => setPerfil(e.target.value)}>
+          <option value="">Selecione o perfil</option>
+          <option value="COLABORADOR">Colaborador</option>
+          <option value="ATENDENTE">Atendente</option>
+        </select>
+        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+        <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+          <button type="submit" style={{ backgroundColor: "#1976d2", color: "white" }}>Cadastrar</button>
+          <button type="button" onClick={onCadastro} style={{ backgroundColor: "#f44336", color: "white" }}>Voltar</button>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default CadastroUsuario;
