@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/usuarios")
-@CrossOrigin(origins = "https://atendimento-7gv53o2fv-mateuscortezdevs-projects.vercel.app")
+@RequestMapping("/api/chamados")
+@CrossOrigin(origins = "*")
 public class UsuarioController {
 
     @Autowired

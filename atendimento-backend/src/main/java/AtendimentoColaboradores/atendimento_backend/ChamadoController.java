@@ -11,7 +11,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/chamados")
-@CrossOrigin(origins = "https://atendimento-7gv53o2fv-mateuscortezdevs-projects.vercel.app")
+@CrossOrigin(origins = "*")
 public class ChamadoController {
 
     @Autowired
