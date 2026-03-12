@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/chamados")
+@RequestMapping("/api/usuarios")
 @CrossOrigin(origins = "*")
 public class UsuarioController {
 
